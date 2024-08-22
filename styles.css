@@ -532,3 +532,44 @@ header {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--text-dark);
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav__links {
+    display: none;
+    flex-direction: column;
+    background-color: var(--extra-light);
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav__links.open {
+    display: flex;
+  }
+
+  .link {
+    padding: 1rem;
+  }
+
+  .nav__logo {
+    font-size: 1.5rem;
+  }
+
+  .nav__links li {
+    text-align: center;
+  }
+}
